@@ -21,7 +21,6 @@ spec:
         image: gcr.io/GOOGLE_CLOUD_PROJECT/pumba-api-gateway:COMMIT_SHA
         ports:
         - containerPort: 8080
-        imagePullPolicy: Never
         command: [ "/usr/bin/krakend" ]
         args: [ "run", "-d", "-c", "/etc/krakend/krakend.json", "-p", "8080" ]
         resources:
