@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "name": "Pumba API Gateway by KrakenD",
+    "port": 8080,
+    "cache_ttl": "3600s",
+    "timeout": "3s",
+    "endpoints": [
+        {
+            "endpoint": "/debug",
+            "backend": [
+                {
+                    "host": [ "http://pumba-api-gateway:8000" ],
+                    "url_pattern": "/__debug/debug"
+                }
+            ]
+        }
+    ]
+}
