@@ -4,7 +4,7 @@
     "timeout": "3000ms",
     "cache_ttl": "300s",
     "output_encoding": "json",
-    "port": 80,
+    "port": 8000,
     "name": "",
     "endpoints": [
       {
