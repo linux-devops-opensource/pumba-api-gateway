@@ -20,7 +20,7 @@
             "method": "GET",
             "extra_config": {},
             "host": [
-              "http://pumba-validator"
+              "http://10.0.197.27:3000/"
             ],
             "disable_host_sanitize": false
           }
