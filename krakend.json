@@ -4,23 +4,23 @@
     "timeout": "3000ms",
     "cache_ttl": "300s",
     "output_encoding": "json",
+    "name": "pumba",
     "port": 8000,
-    "name": "",
     "endpoints": [
       {
-        "endpoint": "/",
+        "endpoint": "/sessions/{id}",
         "method": "GET",
         "output_encoding": "json",
         "extra_config": {},
         "backend": [
           {
-            "url_pattern": "/",
+            "url_pattern": "/sessions/{id}",
             "encoding": "json",
             "sd": "static",
             "method": "GET",
             "extra_config": {},
             "host": [
-              "http://pumba-ui/"
+              "http://pumba-validator"
             ],
             "disable_host_sanitize": false
           }
