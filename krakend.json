@@ -20,7 +20,7 @@
             "method": "GET",
             "extra_config": {},
             "host": [
-              "http://20.50.49.79/"
+              "http://pumba-ui/"
             ],
             "disable_host_sanitize": false
           }
