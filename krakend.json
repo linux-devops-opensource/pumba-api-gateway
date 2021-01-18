@@ -1,18 +1,30 @@
 {
     "version": 2,
-    "name": "Pumba API Gateway by KrakenD",
-    "port": 8080,
-    "cache_ttl": "3600s",
-    "timeout": "3s",
+    "extra_config": {},
+    "timeout": "3000ms",
+    "cache_ttl": "300s",
+    "output_encoding": "json",
+    "port": 80,
+    "name": "",
     "endpoints": [
-        {
-            "endpoint": "/debug",
-            "backend": [
-                {
-                    "host": [ "http://pumba-api-gateway:8000" ],
-                    "url_pattern": "/__debug/debug"
-                }
-            ]
-        }
+      {
+        "endpoint": "/",
+        "method": "GET",
+        "output_encoding": "json",
+        "extra_config": {},
+        "backend": [
+          {
+            "url_pattern": "/",
+            "encoding": "json",
+            "sd": "static",
+            "method": "GET",
+            "extra_config": {},
+            "host": [
+              "http://20.50.49.79/"
+            ],
+            "disable_host_sanitize": false
+          }
+        ]
+      }
     ]
-}
+  }
