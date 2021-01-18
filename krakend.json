@@ -48,19 +48,21 @@
     {
       "endpoint": "/",
       "method": "GET",
-      "output_encoding": "json",
+      "output_encoding": "string",
       "extra_config": {},
       "backend": [
         {
           "url_pattern": "/",
-          "encoding": "json",
+          "encoding": "string",
           "sd": "static",
           "method": "GET",
           "extra_config": {},
           "host": [
             "http://10.0.89.22"
           ],
-          "disable_host_sanitize": false
+          "disable_host_sanitize": false,
+          "is_collection": false,
+          "target": ""
         }
       ]
     }
