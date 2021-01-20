@@ -8,61 +8,21 @@
   "port": 8000,
   "endpoints": [
     {
-      "endpoint": "/sessions/{id}",
-      "method": "GET",
-      "output_encoding": "json",
-      "extra_config": {},
-      "backend": [
-        {
-          "url_pattern": "/sessions/{id}",
-          "encoding": "json",
-          "sd": "static",
-          "method": "GET",
-          "extra_config": {},
-          "host": [
-            "http://10.0.197.27:3000/"
-          ],
-          "disable_host_sanitize": false
-        }
-      ]
-    },
-    {
-      "endpoint": "/sessions/{id}",
-      "method": "POST",
-      "output_encoding": "json",
-      "extra_config": {},
-      "backend": [
-        {
-          "url_pattern": "/sessions/{id}",
-          "encoding": "json",
-          "sd": "static",
-          "method": "POST",
-          "extra_config": {},
-          "host": [
-            "http://10.0.197.27:3000/"
-          ],
-          "disable_host_sanitize": false
-        }
-      ]
-    },
-    {
       "endpoint": "/",
       "method": "GET",
-      "output_encoding": "string",
+      "output_encoding": "no-op",
       "extra_config": {},
       "backend": [
         {
           "url_pattern": "/",
-          "encoding": "string",
-          "sd": "static",
+          "encoding": "no-op",
+          "sd": "custom",
           "method": "GET",
           "extra_config": {},
           "host": [
-            "http://10.0.89.22"
+            "http://20.50.49.79/"
           ],
-          "disable_host_sanitize": false,
-          "is_collection": false,
-          "target": ""
+          "disable_host_sanitize": true
         }
       ]
     }
