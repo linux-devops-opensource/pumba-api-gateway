@@ -8,19 +8,38 @@
   "port": 8000,
   "endpoints": [
     {
-      "endpoint": "/",
-      "method": "GET",
-      "output_encoding": "no-op",
+      "endpoint": "/session",
+      "method": "POST",
+      "output_encoding": "json",
       "extra_config": {},
       "backend": [
         {
-          "url_pattern": "/",
-          "encoding": "no-op",
+          "url_pattern": "/session",
+          "encoding": "json",
+          "sd": "custom",
+          "method": "POST",
+          "extra_config": {},
+          "host": [
+            "http://20.76.10.244:3000"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/session/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "backend": [
+        {
+          "url_pattern": "/session/{id}",
+          "encoding": "json",
           "sd": "custom",
           "method": "GET",
           "extra_config": {},
           "host": [
-            "http://20.50.49.79/"
+            "http://20.76.10.244:3000"
           ],
           "disable_host_sanitize": true
         }
